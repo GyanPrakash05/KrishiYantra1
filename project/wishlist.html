@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecommerce Cart/Wishlist Page Design</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<div class="d-flex justify-content-center">
+    <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<header>
+
+
+    <div class="navbar  navbar-expand-lg container-fluid">
+
+        <div class="nav-bar border">
+            <div class="logo">
+            </div>
+        </div>
+        <div class="pannel-opt nav-item ">
+            <a href="home.html" class="border">Home</a>
+            <a href="rental.html" class="border">Rent</a>
+            <a href="sellpage.html" class="border">Shop</a>
+            <a href="#" class="border">Sell Residues</a>
+            <a href="about.html" class="border">About</a>
+
+        </div>
+        <div class="nav-search">
+            <input type="search" class="search-input" placeholder="Search">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="ions">
+            <i class="fa-regular fa-address-book"></i>
+            <a href="wishlist.html"><i class= "fa-solid fa-cart-shopping"  style="color:green;"></i></a>
+        </div>
+        
+
+
+    </div>
+
+    <style>
+          .navbar {
+                border: 2px solid transparent;
+                height: 60px;
+                background-color: rgba(183, 193, 172, 0.3);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                position: sticky;
+                border-radius: 30px;
+                margin-top: 6px;
+            }
+            
+
+            .logo {
+                background-image: url(logo.png);
+                height: 50px;
+                width: 130%;
+                background-size: cover;
+
+            }
+
+
+
+            .nav-bar {
+                height: 50px;
+                width: 113px;
+            }
+
+            .border {
+                border: 0.5rem solid transparent;
+            }
+
+            .border:hover {
+                border: 0.5rem solid transparent;
+            }
+
+            .nav-search {
+                display: flex;
+                background-color: #9bc591;
+                border: 1px solid #9bc591;
+                width: 490px;
+                height: 40px;
+                border-radius: 20px;
+                justify-content: space-evenly;
+                margin-right: -10px;
+                border-radius: 13px;
+                margin-bottom: 10px;
+            }
+
+
+            .nav-search:hover {
+                border: 1px solid rgb(95, 149, 95);
+            }
+
+            .search-input {
+                width: 100%;
+                font-size: 1rem;
+                padding-left: 10px;
+                border: none;
+                border-top-left-radius: 13px;
+                border-bottom-left-radius: 13px;
+            }
+
+            .search-icon {
+                width: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.3rem;
+                background-color: transparent;
+                border-top-right-radius: 3.5px;
+                border-bottom-right-radius: 3.5px;
+
+
+            }
+
+            .pannel-opt {
+                margin-left: 8px;
+                padding: 0;
+                margin: 0px;
+                font-family: arial;
+                border: border-box;
+                border: 8px;
+
+
+            }
+
+            .pannel-opt a {
+                color: green;
+                display: flex;
+                display: inline;
+                text-decoration: none;
+                padding-right: 15px;
+                border: 8px;
+
+            }
+
+            .pannel-opt a:hover {
+                color: rgb(95, 149, 95);
+            }
+
+            .ions {
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 5px;
+                color: green;
+                font-size: 2rem;
+                background-color: transparent;
+                margin-right: -20px;
+
+            }
+
+        /* Cart or Wishlist */
+.shopping-cart .cart-header{
+    padding: 10px;
+}
+.shopping-cart .cart-header h4{
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.shopping-cart .cart-item a{
+    text-decoration: none;
+}
+.shopping-cart .cart-item{
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+.shopping-cart .cart-item .product-name{
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+.shopping-cart .cart-item .price{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 2px;
+}
+.shopping-cart .btn1{
+    border: 1px solid;
+    margin-right: 3px;
+    border-radius: 0px;
+    font-size: 10px;
+}
+.shopping-cart .btn1:hover{
+    background-color: #2874f0;
+    color: #fff;
+}
+.shopping-cart .input-quantity{
+    border: 1px solid #000;
+    margin-right: 3px;
+    font-size: 12px;
+    width: 40%;
+    outline: none;
+    text-align: center;
+}
+/* Cart or Wishlist */
+    </style>
+    <div class="py-3 py-md-5 bg-light">
+        <div class="container">
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="shopping-cart">
+
+                        <div class="cart-header d-none d-sm-none d-mb-block d-lg-block">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Products</h4>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Price</h4>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Quantity</h4>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Remove</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="row">
+                                <div class="col-md-6 my-auto">
+                                    <a href="">
+                                        <label class="product-name">
+                                            <img src="IMG-20240515-WA0004.jpg" style="width: 50px; height: 50px" alt="">
+                                             Equipment
+                                        </label>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 my-auto">
+                                    <label class="price">569/-</label>
+                                </div>
+                                <div class="col-md-2 col-7 my-auto">
+                                    <div class="quantity">
+                                        <div class="input-group">
+                                            <span class="btn btn1"><i class="fa fa-minus"></i></span>
+                                            <input type="text" value="1" class="input-quantity" />
+                                            <span class="btn btn1"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-5 my-auto">
+                                    <div class="remove">
+                                        <a href="" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> Remove
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="row">
+                                <div class="col-md-6 my-auto">
+                                    <a href="">
+                                        <label class="product-name">
+                                            <img src="IMG-20240515-WA0005.jpg" style="width: 50px; height: 50px" alt="">
+                                             Equipment
+                                        </label>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 my-auto">
+                                    <label class="price">769 </label>
+                                </div>
+                                <div class="col-md-2 col-7 my-auto">
+                                    <div class="quantity">
+                                        <div class="input-group">
+                                            <span class="btn btn1"><i class="fa fa-minus"></i></span>
+                                            <input type="text" value="1" class="input-quantity" />
+
+                                            <span class="btn btn1"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-5 my-auto">
+                                    <div class="remove">
+                                        <a href="" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> Remove
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="row">
+                                <div class="col-md-6 my-auto">
+                                    <a href="">
+                                        <label class="product-name">
+                                            <img src="IMG-20240515-WA0006.jpg" style="width: 50px; height: 50px" alt="">
+                                             Equipment
+                                        </label>
+                                    </a>
+                                </div>
+                                <div class="col-md-2 my-auto">
+                                    <label class="price">569 </label>
+                                </div>
+                                <div class="col-md-2 col-7 my-auto">
+                                    <div class="quantity">
+                                        <div class="input-group">
+                                            <span class="btn btn1"><i class="fa fa-minus"></i></span>
+                                            <input type="text" value="1" class="input-quantity" />
+                                            <span class="btn btn1"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-5 my-auto">
+                                    <div class="remove">
+                                        <a href="" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> Remove
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

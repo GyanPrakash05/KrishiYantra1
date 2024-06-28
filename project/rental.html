@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>krishiyantra-rental</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <header>
+    <div class="navbar  navbar-expand-lg  container-fluid">
+      <div class="nav-bar border">
+        <div class="logo">
+        </div>
+      </div>
+      <div class="pannel-opt nav-item ">
+        <a href="home.html" class="border">Home</a>
+        <a href="rental.html" class="border">Rent</a>
+        <a href="sellpage.html" class="border">Shop</a>
+        <a href="#" class="border">Sell Residues</a>
+        <a href="about.html" class="border">About</a>
+
+      </div>
+      <div class="nav-search">
+        <input type="search" class="search-input" placeholder="Search">
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="ions">
+        <i class="fa-regular fa-address-book"></i>
+        <a href="wishlist.html"><i class= "fa-solid fa-cart-shopping"  style="color:rgb(170, 120, 21);"></i></a>
+      </div>
+
+
+
+      <style>
+        .navbar {
+          border: 2px solid transparent;
+          height: 60px;
+          background-color: rgb(253, 206, 111, 0.3);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          position: sticky;
+          border-radius: 30px;
+          margin-top: 6px;
+
+
+        }
+
+        .logo {
+          background-image: url(logo.png);
+          height: 50px;
+          width: 130%;
+          background-size: cover;
+
+        }
+
+
+
+        .nav-bar {
+          height: 50px;
+          width: 113px;
+        }
+
+        .border {
+          border: 0.5rem solid transparent;
+        }
+
+        .border:hover {
+          border: 0.5rem solid transparent;
+        }
+
+        .nav-search {
+          display: flex;
+          background-color: rgb(253, 206, 111);
+          border: 1px solid rgb(170, 120, 21);
+          width: 490px;
+          height: 40px;
+          border-radius: 20px;
+          justify-content: space-evenly;
+          margin-right: -10px;
+          border-radius: 13px;
+          margin-bottom: 10px;
+        }
+
+
+        .nav-search:hover {
+          border: 1px solid rgb(253, 206, 111);
+        }
+
+        .search-input {
+          width: 100%;
+          font-size: 1rem;
+          padding-left: 10px;
+          border: none;
+          border-top-left-radius: 13px;
+          border-bottom-left-radius: 13px;
+        }
+
+        .search-icon {
+          width: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 1.3rem;
+          background-color: transparent;
+          border-top-right-radius: 3.5px;
+          border-bottom-right-radius: 3.5px;
+
+
+        }
+
+        .pannel-opt {
+          margin-left: 8px;
+          padding: 0;
+          margin: 0px;
+          font-family: arial;
+          border: border-box;
+          border: 8px;
+
+
+        }
+
+        .pannel-opt a {
+          color: rgb(170, 120, 21);
+          display: flex;
+          display: inline;
+          text-decoration: none;
+          padding-right: 15px;
+          border: 8px;
+        }
+
+        .pannel-opt a:hover {
+          color: rgb(253, 206, 111);
+        }
+
+
+        .ions {
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 5px;
+          color: rgb(170, 120, 21);
+          font-size: 2rem;
+          background-color: transparent;
+          margin-right: -20px;
+
+        }
+
+        footer {
+          padding-top: 8px;
+          background-color: rgb(227, 176, 73);
+          color: #fff;
+          padding: 20px;
+        }
+
+        .footer-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+
+        .footer-content p {
+          margin: 0;
+        }
+
+        .footer-content ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+        }
+
+        .footer-content li {
+          margin-right: 20px;
+        }
+
+        .footer-content a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .footer-content a:hover {
+          color: rgb(170, 120, 21);
+        }
+
+        .social-media {
+          display: flex;
+        }
+
+        .social-media a {
+          margin-left: 10px;
+        }
+
+        .social-media a img {
+          height: 20px;
+          width: 20px;
+        }
+
+        .need {
+          margin-left: 15%;
+        }
+      </style>
+  </header>
+  <div class="text-warning need">
+    <h1> Need Something for Sometimes, RENT NOW !
+    </h1>
+  </div>
+  <div class=" row">
+    <style>
+      .card {
+        margin: 10px 10px 10px 10px;
+      }
+    </style>
+    <div class="card  " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">rent</a>
+      </div>
+
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent Now</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+    <div class="card " style="width: 18rem;">
+      <img src="IMG-20240515-WA0004.jpg" class="card-img-top" alt="...">
+      <div class="card-body card text-bg-warning mb-3 bg-warning p-2 text-dark bg-opacity-10">
+        <h5 class="card-title">Rent</h5>
+
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-outline-warning">Rent</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content bg-opacity-10">
+      <p>KRISHI Yantra &copy; 2024</p>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="#">Our Stories</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">User policy</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">help</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fa-brands fa-facebook" alt="Facebook"></i></a></i>
+        <a href="#"><i class="fa-brands fa-x-twitter" alt="Twitter"></i></i> </a>
+        <a href="#"><i class="fa-brands fa-instagram" alt="Instagram"></i></i> </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
